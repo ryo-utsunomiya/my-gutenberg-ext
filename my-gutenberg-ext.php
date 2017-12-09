@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: my-gutenberg-ext
-Plugin URI: https://github.com/ryo-utsunomiya
+Plugin URI: https://github.com/ryo-utsunomiya/my-gutenberg-ext
 Description: Sample implementation of Gutenberg customize.
 Version: 0.1
 Author: Ryo Utsunomiya

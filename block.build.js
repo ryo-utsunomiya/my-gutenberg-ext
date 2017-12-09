@@ -68,7 +68,6 @@
 /***/ (function(module, exports) {
 
 /* global wp */
-console.log('block.js');
 var registerBlockType = wp.blocks.registerBlockType;
 
 var blockStyle = { backgroundColor: '#900', color: '#fff', padding: '20px' };

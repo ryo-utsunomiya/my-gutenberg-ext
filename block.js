@@ -1,5 +1,4 @@
 /* global wp */
-console.log('block.js');
 const { registerBlockType } = wp.blocks;
 const blockStyle = { backgroundColor: '#900', color: '#fff', padding: '20px' };
 

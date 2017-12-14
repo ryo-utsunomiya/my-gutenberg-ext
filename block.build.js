@@ -92,5 +92,70 @@ registerBlockType('my-gutenberg-ext/hello-world', {
     }
 });
 
+var staticNow = new Date().toISOString();
+
+registerBlockType('my-gutenberg-ext/static-clock', {
+    title: 'Static CLock',
+    icon: 'universal-access-alt',
+    category: 'layout',
+    edit: function edit() {
+        return wp.element.createElement(
+            'div',
+            null,
+            'Now: ',
+            staticNow
+        );
+    },
+    save: function save() {
+        return wp.element.createElement(
+            'div',
+            null,
+            'Now: ',
+            staticNow
+        );
+    }
+});
+
+registerBlockType('my-gutenberg-ext/ssr-clock', {
+    title: 'SSR Clock',
+    icon: 'universal-access-alt',
+    category: 'layout',
+    edit: function edit() {
+        return wp.element.createElement(
+            'div',
+            null,
+            'Now: #SSR#'
+        );
+    },
+    save: function save() {
+        return null;
+    }
+});
+
+registerBlockType('my-gutenberg-ext/csr-clock', {
+    title: 'CSR Clock',
+    icon: 'universal-access-alt',
+    category: 'layout',
+    edit: function edit() {
+        return wp.element.createElement(
+            'div',
+            null,
+            'Now: #CSR#'
+        );
+    },
+    save: function save() {
+        return wp.element.createElement(
+            'div',
+            null,
+            'Now: ',
+            wp.element.createElement(
+                'span',
+                { className: 'clock' },
+                '#CSR#'
+            )
+        );
+    }
+});
+
 /***/ })
 /******/ ]);
